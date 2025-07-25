@@ -1,0 +1,9 @@
+<%= form_with url: static_pages_path, method: :get do |f| %>
+    <%= f.label :collection_id %>
+    <%= f.text_field :collection_id %>
+    <%= f.submit %>
+<% end %>
+
+<% @images.each do |image| %>
+    <img src="<%= image.src["small"] %>" alt="">
+<% end %>
